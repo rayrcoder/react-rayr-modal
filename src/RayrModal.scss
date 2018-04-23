@@ -35,7 +35,7 @@
     color: #666;
     font-size: 16px;
     opacity: 0;
-    transition: all .4s;
+    transition: opacity .4s;
 }
 
 .rayr-modal-content.rayr-modal-sm {
@@ -44,6 +44,10 @@
 
 .rayr-modal-content.rayr-modal-lg {
     width: 898px;
+}
+
+.rayr-modal-content.rayr-modal-sg {
+    width: 1198px;
 }
 
 .rayr-modal-header {
@@ -72,16 +76,33 @@
 
 .rayr-modal-body {
     padding: 20px 0;
-    font-weight: 100
+    font-weight: 100;
 }
 
 //动画
-
 .rayr-modal-fade {
     .rayr-modal-bg {
         opacity: 1;
     }
     .rayr-modal-content {
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .rayr-modal-content {
+        width: auto !important;
+        left: 20px;
+        right: 20px;
+        transform: translate(0, 0);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .rayr-modal-content.rayr-modal-sg {
+        width: auto !important;
+        left: 20px;
+        right: 20px;
+        transform: translate(0, 0);
     }
 }

@@ -6,15 +6,14 @@ import './RayrModal.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-export default (opt) => {
+export default (C, opt) => {
 
     let oModal = document.createElement('div');
     let _opt = {
-        title: '系统提示',
-        msg: '您确定要执行此操作吗？',
         className: '',
         backDrop: false,
-        size: 'sm'
+        size: 'sm',
+        data: null
     };
 
     Object.assign(_opt, opt);
@@ -65,15 +64,7 @@ export default (opt) => {
                             _opt.backDrop && this.cancel();
                         }}></div>
                         <div className={`rayr-modal-content rayr-modal-${_opt.size}`}>
-                            <div className="rayr-modal-header">
-                                <span className="title">{_opt.title}</span>
-                                <span className="close-btn" onClick={() => {
-                                    this.cancel()
-                                }}></span>
-                            </div>
-                            <div className="rayr-modal-body">{_opt.msg}</div>
-                            <div className="rayr-modal-footer">
-                            </div>
+                            <C confirm={this.confirm.bind(this)} cancel={this.cancel.bind(this)} data={_opt.data}/>
                         </div>
                     </div>
                 )
