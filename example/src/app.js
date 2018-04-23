@@ -30,7 +30,7 @@ function App() {
                 }, () => {
 
                 })
-            }}>测试
+            }}>确认框
             </button>
             <button onClick={() => {
                 RayrModal.Dialog(Demo).then((res) => {
@@ -38,7 +38,7 @@ function App() {
                 }, (res) => {
                     console.log(res);
                 });
-            }}>测试2
+            }}>模态框
             </button>
         </div>
     )
