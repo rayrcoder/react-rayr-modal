@@ -1,2 +1,70 @@
+/**
+ * Created by Rayr Lee on 2018/4/23.
+ */
+
 .rayr-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999999;
+}
+
+.rayr-modal-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.rayr-modal-content {
+    position: absolute;
+    padding: 20px;
+    width: 598px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px 0 #DBDBDB;
+    border-radius: 2px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #666;
+}
+
+.rayr-modal-content.rayr-modal-sm {
+    width: 298px;
+}
+
+.rayr-modal-content.rayr-modal-lg {
+    width: 898px;
+}
+
+.rayr-modal-header {
+    height: 20px;
+    line-height: 20px;
+    font-size: 16px;
+    display: flex;
+    font-weight: 400;
+    align-items: center;
+    margin-bottom: 20px;
+    .title {
+        flex: 1;
+        width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .close-btn {
+        display: block;
+        width: 8px;
+        height: 8px;
+        background: url("./close.png") no-repeat;
+        background-size: contain;
+        cursor: pointer;
+    }
+}
+
+.rayr-modal-body {
+    padding: 20px 0;
 }

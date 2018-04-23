@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
+import RayrModalConfirm from './RayrModalConfirm';
+
 class RayrModal extends React.Component {
 
     static propTypes = {};
@@ -14,5 +16,7 @@ class RayrModal extends React.Component {
         );
     }
 }
+
+RayrModal.Confirm = RayrModalConfirm;
 
 export default RayrModal;

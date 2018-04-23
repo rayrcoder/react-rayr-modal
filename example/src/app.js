@@ -1,4 +1,5 @@
 import 'react-rayr-modal/src/RayrModal.scss';
+import 'app.scss';
 
 import 'babel-polyfill';
 import React from 'react';
@@ -9,7 +10,13 @@ function App() {
     return (
         <div>
             <h1>组件初始化</h1>
-            <RayrModal/>
+            <button onClick={() => {
+                RayrModal.Confirm().then(() => {
+                }, () => {
+
+                })
+            }}>测试
+            </button>
         </div>
     )
 }
