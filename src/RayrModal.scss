@@ -82,6 +82,13 @@
     font-weight: 100;
 }
 
+.rayr-modal-footer {
+    text-align: right;
+    button {
+        margin-left: 10px;
+    }
+}
+
 //动画
 .rayr-modal-fade {
     .rayr-modal-bg {

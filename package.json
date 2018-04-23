@@ -16,7 +16,9 @@
   ],
   "dependencies": {
     "classnames": "^2.2.5",
+    "font-awesome": "^4.7.0",
     "prop-types": "^15.6.0",
+    "react-rayr-btn": "^0.0.5",
     "react-transition-group": "^2.2.1"
   },
   "devDependencies": {

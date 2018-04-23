@@ -1,3 +1,5 @@
+import 'font-awesome/css/font-awesome.min.css';
+import 'react-rayr-btn/src/RayrBtn.scss';
 import 'react-rayr-modal/src/RayrModal.scss';
 import 'app.scss';
 
@@ -25,10 +27,10 @@ function App() {
         <div>
             <h1>组件初始化</h1>
             <button onClick={() => {
-                RayrModal.Confirm({size: 'sm'}).then(() => {
-
-                }, () => {
-
+                RayrModal.Confirm({size: 'sm'}).then((res) => {
+                    console.log(res);
+                }, (res) => {
+                    console.log(res);
                 })
             }}>确认框
             </button>

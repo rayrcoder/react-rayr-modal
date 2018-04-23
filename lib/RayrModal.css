@@ -83,6 +83,14 @@
   font-weight: 100;
 }
 
+.rayr-modal-footer {
+  text-align: right;
+}
+
+.rayr-modal-footer button {
+  margin-left: 10px;
+}
+
 .rayr-modal-fade .rayr-modal-bg {
   opacity: 1;
 }

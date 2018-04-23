@@ -4,6 +4,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {RayrBtn} from 'react-rayr-btn';
 
 export default (opt) => {
 
@@ -72,6 +73,12 @@ export default (opt) => {
                             </div>
                             <div className="rayr-modal-body">{_opt.msg}</div>
                             <div className="rayr-modal-footer">
+                                <RayrBtn type={'primary'} icon="check" onClick={() => {
+                                    this.confirm();
+                                }}>确定</RayrBtn>
+                                <RayrBtn type={'primary'} inverse icon="close" onClick={() => {
+                                    this.cancel();
+                                }}>取消</RayrBtn>
                             </div>
                         </div>
                     </div>
