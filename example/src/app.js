@@ -34,7 +34,7 @@ function App() {
             }}>测试
             </button>
             <button onClick={() => {
-                RayrModal.Dialog(Demo, {size: 'lg'}).then(() => {
+                RayrModal.Dialog(Demo).then(() => {
 
                 }, () => {
 

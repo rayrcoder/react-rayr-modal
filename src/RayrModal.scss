@@ -25,7 +25,6 @@
 .rayr-modal-content {
     position: absolute;
     padding: 20px;
-    width: 598px;
     background-color: #fff;
     box-shadow: 0 2px 6px 0 #B7B7B7;
     border-radius: 2px;
@@ -40,6 +39,10 @@
 
 .rayr-modal-content.rayr-modal-sm {
     width: 298px;
+}
+
+.rayr-modal-content.rayr-modal-md {
+    width: 598px;
 }
 
 .rayr-modal-content.rayr-modal-lg {

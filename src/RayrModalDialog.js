@@ -11,7 +11,7 @@ export default (C, opt) => {
     let _opt = {
         className: '',
         backDrop: false,
-        size: 'sm',
+        size: 'md',
         data: null
     };
 
