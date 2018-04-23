@@ -25,14 +25,26 @@ export default (opt) => {
         class Modal extends React.Component {
             constructor() {
                 super();
+                this.state = {
+                    className: ''
+                }
             }
 
             componentDidMount() {
+                window.requestAnimationFrame(() => {
+                    this.setState({
+                        className: 'rayr-modal-fade'
+                    })
+                });
             }
 
             close() {
-                ReactDOM.unmountComponentAtNode(oModal);
-                document.body.removeChild(oModal);
+                this.setState({
+                    className: ''
+                }, () => {
+                    ReactDOM.unmountComponentAtNode(oModal);
+                    document.body.removeChild(oModal);
+                })
             }
 
             confirm() {
@@ -47,7 +59,7 @@ export default (opt) => {
 
             render() {
                 return (
-                    <div className="rayr-modal">
+                    <div className={`rayr-modal ${this.state.className}`}>
                         <div className="rayr-modal-bg" onClick={() => {
                             _opt.backDrop && this.cancel();
                         }}></div>
@@ -58,11 +70,8 @@ export default (opt) => {
                                     this.cancel()
                                 }}></span>
                             </div>
-                            <div className="rayr-modal-body">
-                                正文文字文字文字占位
-                            </div>
+                            <div className="rayr-modal-body">{_opt.msg}</div>
                             <div className="rayr-modal-footer">
-
                             </div>
                         </div>
                     </div>

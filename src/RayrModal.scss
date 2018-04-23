@@ -17,6 +17,9 @@
     left: 0;
     right: 0;
     bottom: 0;
+    background-color: rgba(0, 0, 0, .2);
+    opacity: 0;
+    transition: all .2s;
 }
 
 .rayr-modal-content {
@@ -24,12 +27,15 @@
     padding: 20px;
     width: 598px;
     background-color: #fff;
-    box-shadow: 0 2px 6px 0 #DBDBDB;
+    box-shadow: 0 2px 6px 0 #B7B7B7;
     border-radius: 2px;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 100px;
+    transform: translate(-50%, 0);
     color: #666;
+    font-size: 16px;
+    opacity: 0;
+    transition: all .4s;
 }
 
 .rayr-modal-content.rayr-modal-sm {
@@ -43,7 +49,6 @@
 .rayr-modal-header {
     height: 20px;
     line-height: 20px;
-    font-size: 16px;
     display: flex;
     font-weight: 400;
     align-items: center;
@@ -67,4 +72,16 @@
 
 .rayr-modal-body {
     padding: 20px 0;
+    font-weight: 100
+}
+
+//动画
+
+.rayr-modal-fade {
+    .rayr-modal-bg {
+        opacity: 1;
+    }
+    .rayr-modal-content {
+        opacity: 1;
+    }
 }
