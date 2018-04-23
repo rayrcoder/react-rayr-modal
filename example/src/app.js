@@ -9,14 +9,13 @@ import {RayrModal} from 'react-rayr-modal';
 function Demo(props) {
     return (
         <div>
-            <div className="rayr-modal-header">
-                <span className="title">测试</span>
-                <span className="close-btn" onClick={() => {
-                    props.cancel()
-                }}></span>
-            </div>
-            <div className="rayr-modal-body">对话框</div>
-            <div className="rayr-modal-footer"></div>
+            <RayrModal.Header {...props} msg={'取消'}>测试</RayrModal.Header>
+            <RayrModal.Body>
+                <span onClick={() => {
+                    props.confirm('确认')
+                }}>对话框</span>
+            </RayrModal.Body>
+            <RayrModal.Footer></RayrModal.Footer>
         </div>
     )
 }
@@ -34,11 +33,11 @@ function App() {
             }}>测试
             </button>
             <button onClick={() => {
-                RayrModal.Dialog(Demo).then(() => {
-
-                }, () => {
-
-                })
+                RayrModal.Dialog(Demo).then((res) => {
+                    console.log(res);
+                }, (res) => {
+                    console.log(res);
+                });
             }}>测试2
             </button>
         </div>

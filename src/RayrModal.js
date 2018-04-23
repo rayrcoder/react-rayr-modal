@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
 
-import RayrModalConfirm from './RayrModalConfirm';
-import RayrModalDialog from './RayrModalDialog';
+import Confirm from './Confirm';
+import Dialog from './Dialog';
+import Header from './Header';
+import Body from './Body';
+import Footer from './Footer';
 
 class RayrModal extends React.Component {
 
@@ -18,8 +20,6 @@ class RayrModal extends React.Component {
     }
 }
 
-RayrModal.Confirm = RayrModalConfirm;
-
-RayrModal.Dialog = RayrModalDialog;
+RayrModal = {Header, Confirm, Dialog, Body, Footer}
 
 export default RayrModal;

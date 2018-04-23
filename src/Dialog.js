@@ -46,14 +46,14 @@ export default (C, opt) => {
                 })
             }
 
-            confirm() {
+            confirm(res = 'success') {
                 this.close();
-                resolve('success');
+                resolve(res);
             }
 
-            cancel() {
+            cancel(res = 'cancel') {
                 this.close();
-                reject('cancel');
+                reject(res);
             }
 
             render() {
