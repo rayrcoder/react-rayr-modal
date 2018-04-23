@@ -2,7 +2,6 @@
  * Created by Rayr Lee on 2018/4/23.
  */
 
-import './RayrModal.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
 

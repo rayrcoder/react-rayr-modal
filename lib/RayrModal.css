@@ -1,0 +1,107 @@
+/**
+ * Created by Rayr Lee on 2018/4/23.
+ */
+.rayr-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999999;
+}
+
+.rayr-modal-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: all .2s;
+}
+
+.rayr-modal-content {
+  position: absolute;
+  padding: 20px;
+  width: 598px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px 0 #B7B7B7;
+  border-radius: 2px;
+  left: 50%;
+  top: 100px;
+  transform: translate(-50%, 0);
+  color: #666;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity .4s;
+}
+
+.rayr-modal-content.rayr-modal-sm {
+  width: 298px;
+}
+
+.rayr-modal-content.rayr-modal-lg {
+  width: 898px;
+}
+
+.rayr-modal-content.rayr-modal-sg {
+  width: 1198px;
+}
+
+.rayr-modal-header {
+  height: 20px;
+  line-height: 20px;
+  display: flex;
+  font-weight: 400;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.rayr-modal-header .title {
+  flex: 1;
+  width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rayr-modal-header .close-btn {
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: url("./close.png") no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.rayr-modal-body {
+  padding: 20px 0;
+  font-weight: 100;
+}
+
+.rayr-modal-fade .rayr-modal-bg {
+  opacity: 1;
+}
+
+.rayr-modal-fade .rayr-modal-content {
+  opacity: 1;
+}
+
+@media screen and (max-width: 980px) {
+  .rayr-modal-content {
+    width: auto !important;
+    left: 20px;
+    right: 20px;
+    transform: translate(0, 0);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .rayr-modal-content.rayr-modal-sg {
+    width: auto !important;
+    left: 20px;
+    right: 20px;
+    transform: translate(0, 0);
+  }
+}
