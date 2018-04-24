@@ -16,7 +16,7 @@ export default class extends React.Component {
 
     render() {
         return (
-            <div className={`rayr-modal-body ${this.props.classnames}`}>{this.props.children}</div>
+            <div className={`rayr-modal-body ${this.props.className}`}>{this.props.children}</div>
         );
     }
 }

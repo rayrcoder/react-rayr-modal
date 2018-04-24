@@ -18,7 +18,7 @@ export default class extends React.Component {
 
     render() {
         return (
-            <div className="rayr-modal-header">
+            <div className={`rayr-modal-header ${this.props.className}`}>
                 <span className="title">{this.props.children}</span>
                 <span className="close-btn" onClick={() => {
                     this.props.cancel(this.props.msg)
