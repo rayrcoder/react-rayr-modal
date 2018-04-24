@@ -76,7 +76,7 @@ export default (opt) => {
                                 <RayrBtn type={'primary'} icon="check" onClick={() => {
                                     this.confirm();
                                 }}>确定</RayrBtn>
-                                <RayrBtn type={'primary'} inverse icon="close" onClick={() => {
+                                <RayrBtn type={'primary'} inverse="true" icon="close" onClick={() => {
                                     this.cancel();
                                 }}>取消</RayrBtn>
                             </div>

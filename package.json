@@ -1,6 +1,6 @@
 {
   "name": "react-rayr-modal",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "react-rayr-modal",
   "main": "lib/index.js",
   "scripts": {
@@ -18,7 +18,7 @@
     "classnames": "^2.2.5",
     "font-awesome": "^4.7.0",
     "prop-types": "^15.6.0",
-    "react-rayr-btn": "^0.0.5",
+    "react-rayr-btn": "^0.0.8",
     "react-transition-group": "^2.2.1"
   },
   "devDependencies": {
