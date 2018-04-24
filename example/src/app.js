@@ -11,7 +11,7 @@ import {RayrModal} from 'react-rayr-modal';
 function Demo(props) {
     return (
         <div>
-            <RayrModal.Header {...props} msg={'取消'}>测试</RayrModal.Header>
+            <RayrModal.Header {...props}>测试</RayrModal.Header>
             <RayrModal.Body>
                 <span onClick={() => {
                     props.confirm('确认')
