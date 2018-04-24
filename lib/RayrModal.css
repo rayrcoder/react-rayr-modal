@@ -28,12 +28,12 @@
   box-shadow: 0 2px 6px 0 #B7B7B7;
   border-radius: 2px;
   left: 50%;
-  top: 100px;
-  transform: translate(-50%, 0);
+  top: 80px;
+  transform: translate(-50%);
   color: #666;
   font-size: 16px;
   opacity: 0;
-  transition: opacity .4s;
+  transition: all .4s;
 }
 
 .rayr-modal-content.rayr-modal-sm {
@@ -97,6 +97,7 @@
 
 .rayr-modal-fade .rayr-modal-content {
   opacity: 1;
+  top: 100px;
 }
 
 @media screen and (max-width: 980px) {
