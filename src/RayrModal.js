@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 import Confirm from './Confirm';
 import Dialog from './Dialog';
@@ -10,16 +10,20 @@ import Footer from './Footer';
 class RayrModal extends React.Component {
 
     static propTypes = {};
-
-    static defaultProps = {};
+    static defaultProps = {
+        className: ''
+    };
+    static Header = Header;
+    static Body = Body;
+    static Footer = Footer;
+    static Dialog = Dialog;
+    static Confirm = Confirm;
 
     render() {
         return (
-            <div className="rayr-modal">rayr-modal</div>
+            <div id="rayr-modal-container" className={this.props.className}></div>
         );
     }
 }
-
-RayrModal = {Header, Confirm, Dialog, Body, Footer}
 
 export default RayrModal;

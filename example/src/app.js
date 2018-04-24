@@ -27,7 +27,7 @@ function App() {
         <div>
             <h1>组件初始化</h1>
             <button onClick={() => {
-                RayrModal.Confirm({size: 'sm'}).then((res) => {
+                RayrModal.Confirm().then((res) => {
                     console.log(res);
                 }, (res) => {
                     console.log(res);
@@ -42,6 +42,7 @@ function App() {
                 });
             }}>模态框
             </button>
+            <RayrModal className="demo"/>
         </div>
     )
 }

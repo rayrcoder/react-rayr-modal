@@ -3,89 +3,47 @@
  */
 
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {RayrBtn} from 'react-rayr-btn';
 
-export default (opt) => {
+import Dialog from './Dialog';
+import Header from './Header';
+import Body from './Body';
+import Footer from './Footer';
 
-    let oModal = document.createElement('div');
+function Confirm(props) {
+
+    const {data, confirm, cancel} = props;
+
+    return [
+        <Header key="Header" {...props}>{data.title}</Header>,
+        <Body key="Body">{data.msg}</Body>,
+        <Footer key="Footer">
+            <RayrBtn type={data.type} size={data.btnSzie} icon={data.confirmIcon} onClick={() => {
+                confirm();
+            }}>{data.confirmText}</RayrBtn>
+            <RayrBtn type={data.type} size={data.btnSzie} inverse="true" icon={data.cancelIcon} onClick={() => {
+                cancel();
+            }}>{data.cancelText}</RayrBtn>
+        </Footer>
+    ]
+}
+
+export default (opt = {}) => {
+
     let _opt = {
-        title: '系统提示',
-        msg: '您确定要执行此操作吗？',
-        className: '',
-        backDrop: false,
-        size: 'sm'
+        backDrop: opt.backDrop || false, //点击背景是否关闭
+        size: opt.size || 'sm', //确认框大小
+        data: {
+            title: opt.title || '系统提示', //标题
+            msg: opt.msg || '您确定要执行此操作吗？', //内容
+            type: opt.type || 'primary', //确认框类型
+            btnSzie: opt.btnSzie || 'md', //按钮大小
+            confirmText: opt.confirmText || '确定', //确认按钮文案
+            cancelText: opt.cancelText || '取消', //取消按钮文案
+            confirmIcon: opt.confirmIcon || 'check', //确认按钮图标
+            cancelIcon: opt.cancelIcon || 'close'  //取消按钮图标
+        }
     };
 
-    Object.assign(_opt, opt);
-
-    document.body.appendChild(oModal);
-
-    return new Promise((resolve, reject) => {
-
-        class Modal extends React.Component {
-            constructor() {
-                super();
-                this.state = {
-                    className: ''
-                }
-            }
-
-            componentDidMount() {
-                window.requestAnimationFrame(() => {
-                    this.setState({
-                        className: 'rayr-modal-fade'
-                    })
-                });
-            }
-
-            close() {
-                this.setState({
-                    className: ''
-                }, () => {
-                    ReactDOM.unmountComponentAtNode(oModal);
-                    document.body.removeChild(oModal);
-                })
-            }
-
-            confirm() {
-                this.close();
-                resolve('success');
-            }
-
-            cancel() {
-                this.close();
-                reject('cancel');
-            }
-
-            render() {
-                return (
-                    <div className={`rayr-modal ${this.state.className}`}>
-                        <div className="rayr-modal-bg" onClick={() => {
-                            _opt.backDrop && this.cancel();
-                        }}></div>
-                        <div className={`rayr-modal-content rayr-modal-${_opt.size}`}>
-                            <div className="rayr-modal-header">
-                                <span className="title">{_opt.title}</span>
-                                <span className="close-btn" onClick={() => {
-                                    this.cancel()
-                                }}></span>
-                            </div>
-                            <div className="rayr-modal-body">{_opt.msg}</div>
-                            <div className="rayr-modal-footer">
-                                <RayrBtn type={'primary'} icon="check" onClick={() => {
-                                    this.confirm();
-                                }}>确定</RayrBtn>
-                                <RayrBtn type={'primary'} inverse="true" icon="close" onClick={() => {
-                                    this.cancel();
-                                }}>取消</RayrBtn>
-                            </div>
-                        </div>
-                    </div>
-                )
-            }
-        }
-
-        ReactDOM.render(<Modal/>, oModal);
-    });
+    return Dialog(Confirm, _opt)
 }
