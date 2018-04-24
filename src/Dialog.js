@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom';
 
 export default (C, opt) => {
 
-    const CONTAINER = document.getElementById('rayr-modal-container') || document.body;
+    const CONTAINER = document.getElementById('rayr-modal-container') || document.querySelector('body');
 
     let oModal = document.createElement('div');
     let _opt = {
@@ -36,27 +36,19 @@ export default (C, opt) => {
                 this.timer = window.setTimeout(() => {
                     this.setState({
                         className: 'rayr-modal-fade'
-                    })
+                    });
                 }, 50);
-                document.addEventListener('keydown', this.bindEscFn.bind(this), false);
             }
 
             bindEscFn(e) {
-                if (e.key === 'Escape') {
-                    this.cancel();
-                }
+                e.key === 'Escape' && this.cancel();
             }
 
             close() {
-                this.setState({
-                    className: ''
-                }, () => {
-                    ReactDOM.unmountComponentAtNode(oModal);
-                    CONTAINER.removeChild(oModal);
-                    document.removeEventListener('keydown', this.bindEscFn, false);
-                    clearTimeout(this.timer);
-                    this.timer = null;
-                })
+                ReactDOM.unmountComponentAtNode(oModal);
+                CONTAINER.removeChild(oModal);
+                clearTimeout(this.timer);
+                this.timer = null;
             }
 
             confirm(res = 'success') {
