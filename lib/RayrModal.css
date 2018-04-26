@@ -7,7 +7,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 9999999;
+  z-index: 99998;
+}
+
+.rayr-modal-confirm {
+  z-index: 999998;
 }
 
 .rayr-modal-bg {
