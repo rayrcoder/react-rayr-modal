@@ -4,6 +4,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 export default class extends React.Component {
     static propTypes = {
@@ -16,7 +17,7 @@ export default class extends React.Component {
 
     render() {
         return (
-            <div className={`rayr-modal-body ${this.props.className}`}>{this.props.children}</div>
+            <div className={classnames('rayr-modal-body', this.props.className)}>{this.props.children}</div>
         );
     }
 }

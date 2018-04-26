@@ -4,6 +4,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 export default class extends React.Component {
     static propTypes = {
@@ -18,7 +19,7 @@ export default class extends React.Component {
 
     render() {
         return (
-            <div className={`rayr-modal-header ${this.props.className}`}>
+            <div className={classnames('rayr-modal-header', this.props.className)}>
                 <span className="title">{this.props.children}</span>
                 <span className="close-btn" onClick={() => {
                     this.props.cancel(this.props.msg)

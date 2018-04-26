@@ -21,7 +21,7 @@ class RayrModal extends React.Component {
 
     render() {
         return (
-            <div id="rayr-modal-container" className={this.props.className}></div>
+            <div id="rayr-modal-container" className={classnames(this.props.className)}></div>
         );
     }
 }
