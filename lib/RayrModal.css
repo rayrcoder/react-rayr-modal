@@ -8,6 +8,7 @@
   right: 0;
   bottom: 0;
   z-index: 99998;
+  overflow-y: auto;
 }
 
 .rayr-modal-confirm {
@@ -15,7 +16,7 @@
 }
 
 .rayr-modal-bg {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -38,6 +39,7 @@
   font-size: 16px;
   opacity: 0;
   transition: all .4s;
+  margin-bottom: 100px;
 }
 
 .rayr-modal-content.rayr-modal-sm {
