@@ -13,9 +13,9 @@ function Demo(props) {
         <div>
             <RayrModal.Header {...props}>测试</RayrModal.Header>
             <RayrModal.Body>
-                <span onClick={() => {
-                    props.confirm('确认')
-                }}>对话框</span>
+                <div>测试</div>
+                <div>测试</div>
+                <div>测试</div>
             </RayrModal.Body>
             <RayrModal.Footer></RayrModal.Footer>
         </div>
