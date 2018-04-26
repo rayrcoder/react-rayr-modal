@@ -4,6 +4,7 @@
 
 import React from 'react';
 import {RayrBtn} from 'react-rayr-btn';
+import classnames from 'classnames';
 
 import Dialog from './Dialog';
 import Header from './Header';
@@ -33,6 +34,7 @@ export default (opt = {}) => {
     let _opt = {
         backDrop: opt.backDrop || false, //点击背景是否关闭
         size: opt.size || 'sm', //确认框大小
+        className: classnames('rayr-modal-confirm', opt.className),
         data: {
             title: opt.title || '系统提示', //标题
             msg: opt.msg || '您确定要执行此操作吗？', //内容

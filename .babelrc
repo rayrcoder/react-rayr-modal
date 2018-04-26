@@ -15,6 +15,7 @@
     "plugins": [
         "add-module-exports",
         "transform-class-properties",
-        "transform-object-rest-spread"
+        "transform-object-rest-spread",
+        "transform-decorators-legacy"
     ]
 }

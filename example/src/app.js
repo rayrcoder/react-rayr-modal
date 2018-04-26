@@ -42,7 +42,6 @@ function App() {
                 });
             }}>模态框
             </button>
-            <RayrModal className="demo"/>
         </div>
     )
 }

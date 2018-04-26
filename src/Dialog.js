@@ -4,6 +4,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import classnames from 'classnames';
 
 export default (C, opt) => {
 
@@ -63,7 +64,7 @@ export default (C, opt) => {
 
             render() {
                 return (
-                    <div className={`rayr-modal ${this.state.className}`}>
+                    <div className={classnames('rayr-modal', _opt.className, this.state.className)}>
                         <div className="rayr-modal-bg" onClick={() => {
                             _opt.backDrop && this.cancel();
                         }}></div>
