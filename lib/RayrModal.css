@@ -28,7 +28,7 @@
 
 .rayr-modal-content {
   position: absolute;
-  padding: 20px;
+  padding: 20px 20px 0;
   background-color: #fff;
   box-shadow: 0 2px 6px 0 #B7B7B7;
   border-radius: 2px;
