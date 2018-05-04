@@ -36,7 +36,6 @@
   top: 80px;
   transform: translate(-50%);
   color: #666;
-  font-size: 16px;
   opacity: 0;
   transition: all .4s;
   margin-bottom: 100px;
@@ -64,7 +63,8 @@
   display: flex;
   font-weight: 400;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  font-size: 16px;
 }
 
 .rayr-modal-header .title {
@@ -85,8 +85,9 @@
 }
 
 .rayr-modal-body {
-  padding: 20px 0;
+  padding: 15px 0;
   font-weight: 100;
+  font-size: 14px;
 }
 
 .rayr-modal-footer {
